@@ -13,7 +13,9 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
       justifyContent: "center",
       width: { xs: "356px", md: "320px" },
       height: "326px",
-      margin:'auto'
+      margin:'auto',
+      //making it a reusable component by passing it in the props and then using it in the channeldetail
+      marginTop,
     }}
   >
     <Link to={`/channel/${channelDetail?.id?.channelId}`}>
@@ -24,7 +26,7 @@ const ChannelCard = ({ channelDetail, marginTop }) => (
           justifyContent: "center",
           textAlign: "center",
           color: "#fff",
-          marginTop,
+     
         }}
       >
         <CardMedia
