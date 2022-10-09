@@ -1,11 +1,11 @@
 import React from "react";
 import { Stack, Box } from "@mui/material";
 import {VideoCard,ChannelCard} from "./";
-
-const Videos = ({ videos }) => {
+//if there is any specific direction passed in use that else use row
+const Videos = ({ videos,direction }) => {
   console.log(videos)
   return (
-    <Stack direction="row" sx={{flexWrap:"wrap"}}  justifyContent="flex-start" gap={2}>
+    <Stack direction={direction || "row" } sx={{flexWrap:"wrap"}}  justifyContent="flex-start" gap={2}>
       {videos.map((item, idx) => (
         <Box key={idx}>
           {item.id.videoId && <VideoCard video={item} />}
